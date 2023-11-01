@@ -6,8 +6,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb:  0, 0, 0;
+  --background-end-rgb:  0, 0, 0;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -43,8 +43,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb:  0, 0, 0;
+    --background-end-rgb:  0, 0, 0;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
     --secondary-glow: linear-gradient(
@@ -79,6 +79,11 @@
   margin: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
 html,
 body {
   max-width: 100vw;
@@ -86,7 +91,7 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(0, 0, 0);
   background: linear-gradient(
       to bottom,
       transparent,
@@ -99,6 +104,55 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.root-wrapper {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.phone-container{
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid;
+  height: 580px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5rem;
+  align-content: center;
+}
+
+.navbar {
+  width: 320px;
+  background-color: black;
+  height: 30px;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  height: 10%;
+}
+
+.children {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  margin-bottom: '0px';
+  padding-bottom: '0px';
+  padding-left: '0px' ;
+  padding-right: 0 ;
+  background-color: '#F6F7FC';
+  flex: 1;
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
