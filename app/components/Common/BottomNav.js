@@ -12,6 +12,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import BuildCircleIcon from "@mui/icons-material/BuildCircle";
 import BookIcon from "@mui/icons-material/Book";
 import Link from "next/link";
+import HomeIcon from '@mui/icons-material/Home';
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
@@ -21,7 +22,7 @@ export default function BottomNav() {
   };
   return (
     <BottomNavigation
-      sx={{ width: 320 }}
+      sx={{ width: '100%' }}
       value={value}
       onChange={handleChange}
       showLabels
@@ -35,6 +36,15 @@ export default function BottomNav() {
         label="Community"
         value="favorites"
         icon={<PeopleIcon />}
+      />
+       <BottomNavigationAction
+        label="Home"
+        value="home"
+        icon={
+          <Link href='//'>
+            <HomeIcon />
+          </Link>
+        }
       />
       <BottomNavigationAction
         label="Tools"

@@ -8,7 +8,7 @@ export default function LearnCategoryPage({ params, searchParams }) {
   const category = params.category;
   return (
     <Wrapper>
-      <PageTitle title={category} />
+      <PageTitle title={category} hasBack={true}/>
 
       <Box sx={{ width: "100%", marginTop: "30px" }}>
         <Grid container spacing={3}>
