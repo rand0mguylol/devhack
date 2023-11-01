@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Container className="phone-container" maxWidth="lg">
+        <Container className="phone-container" maxWidth="xs" sx={{backgroundColor: '#F6F7FC'}}>
           <Container maxWidth="lg" disableGutters className='children'>{children}</Container>
           <BottomNav />
         </Container>

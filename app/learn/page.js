@@ -44,6 +44,14 @@ export default function LearnPage() {
                 variant="subtitle1"
               />
             </Grid>
+            <Grid item xs={12}>
+              <CategoryCard
+                image="/nutrition-learn.png"
+                title="Abortion"
+                category="Abortion"
+                variant="subtitle1"
+              />
+            </Grid>
           </Grid>
         </Box>
       </Wrapper>
