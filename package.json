@@ -12,9 +12,11 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
+    "@google-ai/generativelanguage": "^1.1.0",
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.16",
     "@vercel/postgres": "^0.5.1",
+    "google-auth-library": "^9.2.0",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"

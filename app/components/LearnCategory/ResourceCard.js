@@ -12,7 +12,7 @@ export default function ResourceCard(props) {
       <CardMedia
         component="img"
         alt="green iguana"
-        height="100"
+        height="125"
         image={props.image}
       />
       <CardContent sx={{paddingBottom: '0px'}}>

@@ -12,9 +12,11 @@ export default function Wrapper({ children }) {
         color: "white",
         paddingTop: "15px",
         backgroundColor: "#F6F7FC",
-        paddingLeft: "0px",
-        paddingRight: "0px",
+        paddingLeft: '22px',
+        paddingRight: '22px',
         width: "100%",
+        height: '100%',
+        overflowY: 'scroll',
       }}
     >
       {children}

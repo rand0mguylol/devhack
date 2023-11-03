@@ -13,12 +13,15 @@ import BuildCircleIcon from "@mui/icons-material/BuildCircle";
 import BookIcon from "@mui/icons-material/Book";
 import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
+import { useRouter } from "next/navigation";
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
+  const router = useRouter();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    router.push(newValue)
   };
   return (
     <BottomNavigation
@@ -28,8 +31,8 @@ export default function BottomNav() {
       showLabels
     >
       <BottomNavigationAction
-        label="Chat"
-        value="recents"
+        label="Consult"
+        value="/consult"
         icon={<ChatIcon />}
       />
       <BottomNavigationAction
@@ -39,11 +42,9 @@ export default function BottomNav() {
       />
        <BottomNavigationAction
         label="Home"
-        value="home"
+        value="/"
         icon={
-          <Link href='//'>
             <HomeIcon />
-          </Link>
         }
       />
       <BottomNavigationAction
@@ -53,11 +54,9 @@ export default function BottomNav() {
       />
       <BottomNavigationAction
         label="Learn"
-        value="folder"
+        value="/learn"
         icon={
-          <Link href='/learn'>
             <BookIcon />
-          </Link>
         }
       />
     </BottomNavigation>

@@ -4,9 +4,11 @@ import CategoryCard from "../components/Learn/CategoryCard";
 import PageTitle from "../components/Common/PageTitle";
 import Wrapper from "../components/Common/Wrapper";
 
+
 export default function LearnPage() {
+
   return (
-    <>
+
       <Wrapper>
         <PageTitle title="Learn" variant='h5'/>
 
@@ -55,6 +57,5 @@ export default function LearnPage() {
           </Grid>
         </Box>
       </Wrapper>
-    </>
   );
 }
