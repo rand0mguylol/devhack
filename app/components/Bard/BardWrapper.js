@@ -16,14 +16,11 @@ export default function BardWrapper(props) {
   const [tempValue, setTempValue] = useState("");
 
   const [isPending, startTransition] = useTransition()
-  // const [chatArr, setChatArr] = useState([]);
-  const chatArr = [];
-  // let tempValue = ''
 
-  console.log("test");
+  const chatArr = [];
+
   const handleOnChange = (e) => {
     setSearchValue(e.target.value);
-    // console.log(chatArr)
   };
 
   const handleSearch = async () => {
@@ -66,7 +63,7 @@ export default function BardWrapper(props) {
           }}
         >
           {props.chat.map((item, index) => {
-            if (item.isValid) {
+            if (item.is_valid) {
               chatArr.push({ content: item.question });
               chatArr.push({ content: item.answer });
             }

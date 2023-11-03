@@ -1,10 +1,12 @@
 import BardWrapper from "@/app/components/Bard/BardWrapper";
 import { promises as fs } from "fs";
+import { sql } from "@vercel/postgres";
+
 
 export default async function BardPage() {
-  const file = await fs.readFile(process.cwd() + "/app/chat.json", "utf8");
-  const data = JSON.parse(file);
-  const { chat } = data
+  const { rows } = await sql`SELECT * FROM chats`;
 
-  return <BardWrapper chat={chat}/>;
+  return <BardWrapper chat={rows}/>;
 }
+
+export const dynamic = 'force-dynamic'
