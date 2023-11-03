@@ -8,8 +8,8 @@ import path from "path";
 export const requestBard = async (question, chatArr) => {
 
   // console.log('test server action')
-  const dataFilePath = path.join(process.cwd(), "/app/data/chat.json");
-  const file = await fs.readFile(process.cwd() + "/app/data/chat.json", "utf8");
+  const dataFilePath = path.join(process.cwd(), "/public/data/chat.json");
+  const file = await fs.readFile(process.cwd() + "/public/data/chat.json", "utf8");
   const data = JSON.parse(file);
   const { chat } = data;
 
