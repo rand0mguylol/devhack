@@ -47,7 +47,7 @@ export default function ConsultPage() {
         <Grid container spacing={3}>
           <Grid item xs={6}>
             <Link href="/consult/bard">
-              <ConsultSelection title="Bard AI" color="#1B5765">
+              <ConsultSelection title="PaLM" color="#1B5765">
                 <SmartToyIcon sx={{ fontSize: "60px" }} />
               </ConsultSelection>
             </Link>

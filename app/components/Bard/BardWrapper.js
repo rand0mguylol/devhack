@@ -24,6 +24,7 @@ export default function BardWrapper(props) {
   };
 
   const handleSearch = async () => {
+    if(searchValue === "") return;
     setTempValue(searchValue);
     setSearchValue("");
     startTransition(() => {
@@ -37,9 +38,10 @@ export default function BardWrapper(props) {
       handleSearch();
     }
   }
+  
   return (
     <Wrapper>
-      <PageTitle title="Bard AI" variant="h5" hasBack={true} />
+      <PageTitle title="PaLM" variant="h5" hasBack={true} />
 
       <Box
         sx={{
