@@ -37,7 +37,7 @@ export default function BottomNav() {
       />
       <BottomNavigationAction
         label="Community"
-        value="favorites"
+        value="/community"
         icon={<PeopleIcon />}
       />
        <BottomNavigationAction
