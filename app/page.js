@@ -3,6 +3,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import Book from "@mui/icons-material/Book";
+import FmdGoodIcon from "@mui/icons-material/FmdGood";
+import Link from "next/link";
 import "./home.css";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -10,7 +12,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 export default async function Home() {
-
   return (
     <>
       <Container
@@ -105,38 +106,41 @@ export default async function Home() {
               </Button>
             </Grid>
             <Grid item xs={4}>
-              <Button
-                variant="text"
-                sx={{
-                  color: "white",
-                  display: "flex",
-                  flexDirection: "column",
-                  margin: 0,
-                  padding: 0,
-                  borderRight: "1px solid #fff",
-                  width: "100%",
-                }}
-              >
-                <SmartToyIcon sx={{ marginBottom: "5px" }} />
-                <Typography variant="caption">Bard</Typography>
-              </Button>
+              <Link href='/consult/bard'>
+                <Button
+                  variant="text"
+                  sx={{
+                    color: "white",
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: 0,
+                    padding: 0,
+                    borderRight: "1px solid #fff",
+                    width: "100%",
+                  }}
+                >
+                  <SmartToyIcon sx={{ marginBottom: "5px" }} />
+                  <Typography variant="caption">Bard</Typography>
+                </Button>
+              </Link>
             </Grid>
             <Grid item xs={4}>
-              <Button
-                variant="text"
-                sx={{
-                  color: "white",
-                  display: "flex",
-                  flexDirection: "column",
-                  margin: 0,
-                  padding: 0,
-                  width: "100%",
-                  // borderRight: "1px solid #fff",
-                }}
-              >
-                <Book sx={{ marginBottom: "5px" }} />
-                <Typography variant="caption">Learn</Typography>
-              </Button>
+              <Link href="/map">
+                <Button
+                  variant="text"
+                  sx={{
+                    color: "white",
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: 0,
+                    padding: 0,
+                    width: "100%",
+                  }}
+                >
+                  <FmdGoodIcon sx={{ marginBottom: "5px" }} />
+                  <Typography variant="caption">Maps</Typography>
+                </Button>
+              </Link>
             </Grid>
           </Grid>
         </Box>
