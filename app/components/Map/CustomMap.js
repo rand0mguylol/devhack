@@ -24,7 +24,10 @@ export default function CustomMap() {
         lat: 3.0981247378158474,
         lng: 101.72605166767005
       },
-      hours: '9am - 5pm'
+      hours: '9am - 5pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     },
     {
       id: 2,
@@ -34,7 +37,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.055673533849258, lng: 101.70053994274686
       },
-      hours: '9am - 6pm'
+      hours: '9am - 6pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     },
     {
       id: 3,
@@ -44,7 +50,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.077369348985492, lng: 101.73685613961983
       },
-      hours: '8am - 5pm'
+      hours: '8am - 5pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     },
     {
       id: 4,
@@ -54,7 +63,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.099856817844579, lng: 101.72547150289198
       },
-      hours: '24 hours'
+      hours: '24 hours',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     },
     {
       id: 5,
@@ -64,7 +76,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.0815494597219724, lng: 101.5842358736658
       },
-      hours: '10 am - 10pm'
+      hours: '10 am - 10pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     },
     {
       id: 6,
@@ -74,7 +89,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.083019565701683, lng: 101.58809419881301
       },
-      hours: '10 am - 10pm'
+      hours: '10 am - 10pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
     {
       id: 7,
@@ -84,7 +102,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.0742643214084016, lng: 101.58762663980347
       },
-      hours: '10 am - 10pm'
+      hours: '10 am - 10pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
     {
       id: 8,
@@ -124,7 +145,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.0740180648712943, lng: 101.58667905937013
       },
-      hours: '8:30am - 9:30pm'
+      hours: '8:30am - 9:30pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
     {
       id: 12,
@@ -134,7 +158,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.066055460348608, lng: 101.57696030298885
       },
-      hours: '8:30am - 9:30pm'
+      hours: '8:30am - 9:30pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
     {
       id: 13,
@@ -144,7 +171,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.0662593031322563, lng: 101.57772583411216
       },
-      hours: '8:30am - 9:30pm'
+      hours: '8:30am - 9:30pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
     {
       id: 14,
@@ -164,7 +194,10 @@ export default function CustomMap() {
       loc: {
         lat: 3.0670949998186248, lng: 101.60942551129597
       },
-      hours: '8:30am - 9:30pm'
+      hours: '8:30am - 9:30pm',
+      supply: [
+        "Matenity Wear", "Prenatal Vitamins", "Baby Essentials", "Baby Care Products", "Contraceptives"
+      ]
     }, 
 
   ]
@@ -206,6 +239,7 @@ export default function CustomMap() {
         address={selection.address}
         number={selection.number}
         hours={selection.hours}
+        supply={selection.supply}
       />
     </>
   );
