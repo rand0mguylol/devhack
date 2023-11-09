@@ -2,10 +2,11 @@ import { Box, Typography, Grid } from "@mui/material";
 
 export default function ConsultSelection(props) {
   const { color } = props;
+  
   return (
     <Box
       sx={{
-        width: "150px",
+        width: props.isFull ? '100%' : '150px',
         backgroundColor: color,
         height: "150px",
         padding: "10px",

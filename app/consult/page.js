@@ -6,6 +6,7 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import RememberMeIcon from "@mui/icons-material/RememberMe";
 import ConsultSelection from "../components/Consult/ConsultSelection";
 import Link from "next/link";
+import ChildCareIcon from "@mui/icons-material/ChildCare";
 
 export default function ConsultPage() {
   return (
@@ -44,8 +45,16 @@ export default function ConsultPage() {
       </Box>
 
       <Box sx={{ marginTop: "20px" }}>
-        <Grid container spacing={3}>
-          <Grid item xs={6}>
+        <Grid
+          container
+          spacing={3}
+          sx={{
+            justifyContent: "space-between",
+            alignItems: "center",
+            alignContent: "center",
+          }}
+        >
+          <Grid item xs={6} sx={{ alignItems: "center" }}>
             <Link href="/consult/bard">
               <ConsultSelection title="PaLM" color="#1B5765">
                 <SmartToyIcon sx={{ fontSize: "60px" }} />
@@ -53,14 +62,22 @@ export default function ConsultPage() {
             </Link>
           </Grid>
           <Grid item xs={6}>
-            <ConsultSelection title="Remote Monitoring" color="#03CDA9">
-              <RememberMeIcon sx={{ fontSize: "60px" }} />
-            </ConsultSelection>
+            <Link href='/consult/consultation'>
+              <ConsultSelection title="Remote Consultation" color="#03CDA9">
+                <RememberMeIcon sx={{ fontSize: "60px" }} />
+              </ConsultSelection>
+            </Link>
           </Grid>
-          <Grid item xs={6}>
-            <ConsultSelection title="Health Experts" color="#EBA71F">
-              <LocalHospitalIcon sx={{ fontSize: "60px" }} />
-            </ConsultSelection>
+          <Grid item xs={12}>
+            <Link href="/consult/adoption">
+              <ConsultSelection
+                title="Placing baby for adoption"
+                color="#4BCFFA"
+                isFull={true}
+              >
+                <ChildCareIcon sx={{ fontSize: "60px" }} />
+              </ConsultSelection>
+            </Link>
           </Grid>
         </Grid>
       </Box>

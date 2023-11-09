@@ -14,6 +14,7 @@ import BookIcon from "@mui/icons-material/Book";
 import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
 import { useRouter } from "next/navigation";
+import StorefrontIcon from '@mui/icons-material/Storefront';
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
@@ -48,9 +49,9 @@ export default function BottomNav() {
         }
       />
       <BottomNavigationAction
-        label="Tools"
-        value="nearby"
-        icon={<BuildCircleIcon />}
+        label="Merchant"
+        value="/merchant"
+        icon={<StorefrontIcon />}
       />
       <BottomNavigationAction
         label="Learn"
