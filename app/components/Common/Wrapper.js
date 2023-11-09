@@ -2,9 +2,6 @@ import { Container } from "@mui/material";
 
 export default function Wrapper({ props, children }) {
 
-  // const isFull = props?.isFull ? '100%' : 'auto'
-  // console.log(isFull)
-
   return (
     <Container
       disableGutters
