@@ -10,12 +10,15 @@ import { startTransition, useState } from "react";
 import { requestBard } from "@/app/_actions/Bard";
 import { useTransition } from "react";
 import LoadingChat from "./LoadingChat";
+import { useContext } from "react";
+import { UserContext } from "@/app/context/UserProvider";
 
 export default function BardWrapper(props) {
+  const userID = useContext(UserContext);
   const [searchValue, setSearchValue] = useState("");
   const [tempValue, setTempValue] = useState("");
 
-  const [isPending, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition();
 
   const chatArr = [];
 
@@ -24,21 +27,20 @@ export default function BardWrapper(props) {
   };
 
   const handleSearch = async () => {
-    if(searchValue === "") return;
+    if (searchValue === "") return;
     setTempValue(searchValue);
     setSearchValue("");
     startTransition(() => {
-      requestBard(searchValue, chatArr);
+      requestBard(searchValue, chatArr, userID);
     });
   };
 
   const handleKeyPress = (e) => {
-
     if (e.key === "Enter") {
       handleSearch();
     }
-  }
-  
+  };
+
   return (
     <Wrapper>
       <PageTitle title="PaLM" variant="h5" hasBack={true} />
@@ -64,19 +66,20 @@ export default function BardWrapper(props) {
             paddingBottom: "20px",
           }}
         >
-          {props.chat.map((item, index) => {
-            if (item.is_valid) {
-              chatArr.push({ content: item.question });
-              chatArr.push({ content: item.answer });
-            }
-            const modifiedAnswer = item.answer.replace(/\n/g, "<br />");
-            return (
-              <Box key={index}>
-                <Question value={item.question} />
-                <Answer value={item.answer} />
-              </Box>
-            );
-          })}
+          {props.chat
+            .filter((item) => item.userid === userID)
+            .map((item, index) => {
+              if (item.is_valid) {
+                chatArr.push({ content: item.question });
+                chatArr.push({ content: item.answer });
+              }
+              return (
+                <Box key={index}>
+                  <Question value={item.question} />
+                  <Answer value={item.answer} />
+                </Box>
+              );
+            })}
 
           {isPending && <Question value={tempValue} />}
           {isPending && <LoadingChat />}

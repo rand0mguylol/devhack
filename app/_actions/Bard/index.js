@@ -3,7 +3,7 @@ import bardClient from "@/app/provider";
 import { revalidatePath } from "next/cache";
 import { sql } from "@vercel/postgres";
 
-export const requestBard = async (question, chatArr) => {
+export const requestBard = async (question, chatArr, userID) => {
 
   chatArr.push({ content: question.trim() });
 
@@ -29,7 +29,7 @@ export const requestBard = async (question, chatArr) => {
     isValid = false;
   }
   finally{
-    await sql`INSERT INTO chats (question, answer, is_valid) VALUES (${question}, ${answer}, ${isValid})`
+    await sql`INSERT INTO chats (userID, question, answer, is_valid) VALUES (${userID}, ${question}, ${answer}, ${isValid})`
   }
 
   

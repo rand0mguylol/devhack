@@ -1,11 +1,13 @@
-'use client'
+"use client";
 
-import { createContext } from 'react';
+import { createContext } from "react";
+const uniqueId = parseInt(Date.now() * Math.random()).toString();
 
-const UserContext = createContext(null);
+export const UserContext = createContext(null);
 
-export default function UserProvider({props, children}) {
-    <UserContext.Provider value={props.user}>
-        {children}
-    </UserContext.Provider>
+export default function UserProvider({ children }) {
+
+  return (
+    <UserContext.Provider value={uniqueId}>{children}</UserContext.Provider>
+  );
 }
