@@ -9,8 +9,8 @@ export default function PageTitle(props) {
   const router = useRouter();
   const hasBack = props.hasBack;
   return (
-    <Box sx={{ width: "100%" }}>
-      <Grid container spacing={2} sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%"}}>
+      <Grid container spacing={2} sx={{ alignItems: "center"}}>
         {hasBack ? (
           <Grid item xs={2}>
             <Button
@@ -25,7 +25,7 @@ export default function PageTitle(props) {
           <Typography
             variant={props.variant}
             component="div"
-            sx={{ flexGrow: 1, color: "#1B5765", fontWeight: "bold", marginLeft: hasBack ? 0 : 3 }}
+            sx={{ flexGrow: 1, color: "#1B5765", fontWeight: "bold", marginLeft: hasBack ? 0 : 0 }}
           >
             {title}
           </Typography>

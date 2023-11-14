@@ -15,7 +15,7 @@ import SkipNextIcon from "@mui/icons-material/SkipNext";
 import { useRouter } from "next/navigation";
 // import
 
-export default function CategoryCard(props) {
+export default function OrderItemCard(props) {
   const theme = useTheme();
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export default function CategoryCard(props) {
     <Card sx={{ display: "flex", maxWidth: "100%", margin: "auto" }}>
       <CardMedia
         component="img"
-        sx={{ width: 90 }}
+        sx={{ width: 150 }}
         image={props.image}
         alt="Live from space album cover"
       />
@@ -41,19 +41,31 @@ export default function CategoryCard(props) {
           >
             {props.title}
           </Typography>
+          <Typography
+            variant="body1"
+            sx={{  color: "#1B5765", fontSize: '12px' }}
+          >
+            {props.description}
+          </Typography>
+          <Typography
+            variant="subtitle2"
+            sx={{  color: "#1B5765", fontSize: '12px', marginTop: '10px' }}
+          >
+            RM 20
+          </Typography>
           <Button
             variant="contained"
             onClick={() => {
-                router.push(`/learn/${props.category}`)
+              // router.push(`/learn/${props.category}`);
             }}
             sx={{
               fontSize: "8px",
               backgroundColor: "#1B5765",
               marginTop: "15px",
-              borderRadius: '10px'
+              borderRadius: "10px",
             }}
           >
-            Explore Now
+            Add to Cart
           </Button>
         </CardContent>
       </Box>

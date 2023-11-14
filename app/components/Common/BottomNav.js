@@ -13,12 +13,16 @@ import BuildCircleIcon from "@mui/icons-material/BuildCircle";
 import BookIcon from "@mui/icons-material/Book";
 import Link from "next/link";
 import HomeIcon from '@mui/icons-material/Home';
+import { useRouter } from "next/navigation";
+import StorefrontIcon from '@mui/icons-material/Storefront';
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
+  const router = useRouter();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    router.push(newValue)
   };
   return (
     <BottomNavigation
@@ -28,36 +32,32 @@ export default function BottomNav() {
       showLabels
     >
       <BottomNavigationAction
-        label="Chat"
-        value="recents"
+        label="Consult"
+        value="/consult"
         icon={<ChatIcon />}
       />
       <BottomNavigationAction
         label="Community"
-        value="favorites"
+        value="/community"
         icon={<PeopleIcon />}
       />
        <BottomNavigationAction
         label="Home"
-        value="home"
+        value="/"
         icon={
-          <Link href='//'>
             <HomeIcon />
-          </Link>
         }
       />
       <BottomNavigationAction
-        label="Tools"
-        value="nearby"
-        icon={<BuildCircleIcon />}
+        label="Merchant"
+        value="/merchant"
+        icon={<StorefrontIcon />}
       />
       <BottomNavigationAction
         label="Learn"
-        value="folder"
+        value="/learn"
         icon={
-          <Link href='/learn'>
             <BookIcon />
-          </Link>
         }
       />
     </BottomNavigation>
